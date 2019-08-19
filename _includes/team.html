@@ -1,0 +1,31 @@
+    <div class="spacer bg-success-gradiant" id="team">
+        <div class="container">
+
+
+            <div class="row justify-content-center">
+               <div class="col-md-12 text-center m-b-40  aos-init aos-animate" data-aos="fade-up" data-aos-duration="1800" data-aos-easing="linear"><img src="{{site.baseurl}}/images/cold-coffee-drink.svg" alt="Coffee Express India" class="img-fluid" ></div>
+                <div class="col-md-8 text-center">
+                    <div class="heading-box">
+                       {% for item in site.data.details.page-headers.team %}
+                        <h2 class="title text-white">{{item.title}}</h2>
+                        <h6 class="subtitle text-white">{{item.details}}</h6>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+                <br>
+                <br>
+                 <div class="row m-t-40">
+                 {% for item in site.data.details.team %}
+                <div class="col-md-6 text-center">
+                    <div class="member-box aos-init aos-animate" data-aos="{% if forloop.index == 1 %}fade-right{% elsif forloop.index == 2 %}fade-left{% else %}fade-left{% endif %}" data-aos-duration="1200" data-aos-easing="linear">
+                        <img src="{{site.baseurl}}/images/{{item.image}}" class="circle team-image" alt="{{site.title}}">
+                        <h6 class="heading text-white">{{item.title}}</h6>
+                        <span class="text-white">{{item.position}}</span>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>

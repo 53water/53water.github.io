@@ -1,0 +1,35 @@
+/*============================================================== 
+ You can write your style here and overwrite our style
+ ============================================================== */
+
+
+
+
+#team {
+    .member-box {
+            
+        margin-bottom: 25px;
+        
+        .team-image {
+            margin-bottom: 0.5em;
+            border: 5px solid #fff;
+        }
+        
+        h6 {
+            font-weight: bold;
+        }
+        span {
+            color: #eee !important;
+        }
+    }
+}
+.p40 {
+    padding: 40px;
+    @include media-query($on-palm) {
+        padding: 10px;
+    }
+}
+
+.plus:after {
+    content: ' +'
+}

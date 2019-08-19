@@ -1,0 +1,66 @@
+<div id="services" class="spacer feature24">
+    <div class="container">
+       {% for item in site.data.details.page-headers.services %}
+        <!-- Row -->
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center m-b-40  aos-init aos-animate" data-aos="fade-up" data-aos-duration="1800" data-aos-easing="linear"><img src="{{site.baseurl}}/images/coffee-express.svg" alt="Coffee Express India" class="img-fluid" ></div>
+            <br>
+            <div class="col-md-7 text-center">
+                <h2 class="title">{{item.title}}</h2>
+                <h6 class="subtitle">{{item.details}}</h6>
+            </div>
+        </div>
+        <br>
+        <!-- Row -->
+        <div class="row m-t-30 p-t-30 client-box">
+            <!-- column  -->
+            <div class="col-lg-4 col-md-6">
+                <div class="d-flex no-block">
+                    <div class="display-5"><i class="icon-Eyeglasses-Smiley"></i></div>
+                    <div class="m-l-20">
+                        <h1 class="font-light counter m-b-0">{{item.minutes}}</h1>
+                        <h6 class="text-muted font-13 text-uppercase">минут предварительного расчета работ</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- column  -->
+            <!-- column  -->
+            <div class="col-lg-4 col-md-6">
+                <div class="d-flex no-block">
+                    <div class="display-5"><i class="icon-Empire-StateBuilding"></i></div>
+                    <div class="m-l-20">
+                        <h1 class="font-light counter m-b-0 plus">{{item.projects}}</h1>
+                        <h6 class="text-muted font-13 text-uppercase">Реализованных проектов</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- column  -->
+            <!-- column -->
+            <div class="col-lg-3 col-md-6">
+                <div class="d-flex no-block">
+                    <div class="display-5"><i class="icon-Bulleted-List"></i></div>
+                    <div class="m-l-20">
+                        <h1 class="font-light counter m-b-0">{{item.addons}}</h1>
+                        <h6 class="text-muted font-13 text-uppercase">скрытых надбавок и неожиданностей всегда актуальная цена по договору с этапа замеров</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- column  -->
+            <!-- column  -->
+            <div class="col-lg-4 col-md-6">
+                <div class="d-flex no-block">
+                    <div class="display-5"><i class="icon-Diploma-2"></i></div>
+                    <div class="m-l-20">
+                        <h1 class="font-light counter m-b-0">{{item.organisation}}</h1>
+                        <h6 class="text-muted font-13 text-uppercase">Организация ответственна за полный цикл работ под ключ без нестыковок и переделок</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- column  -->
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<br>
+
+

@@ -1,0 +1,31 @@
+<div id="technology" class="spacer feature1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center m-b-20  aos-init aos-animate" data-aos="fade-up" data-aos-duration="1800" data-aos-easing="linear"><img src="{{site.baseurl}}/images/products.svg" alt="Coffee Express India" class="img-fluid"></div>
+            <div class="col-md-7 text-center">
+               {% for item in site.data.details.page-headers.technology %}
+                <h2 class="title">{{item.title}}</h2>
+                <h6 class="subtitle">{{item.details}}</h6>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Row  -->
+        <div class="row">
+            <!-- Column -->
+            {% for item in site.data.details.technology %}
+            <div class="col-md-4 wrap-feature1-box">
+                <div class="card aos-init aos-animate" data-aos="{% if forloop.index == 1 %}fade-right{% elsif forloop.index == 2 %}zoom-in{% else %}fade-left{% endif %}" data-aos-duration="1200">
+                    <div class="card-body text-center">
+                        <div class="icon-space"><i class="display-5 {{item.icon}}"></i></div>
+                        <h5 class="font-medium">{{item.title}}</h5>
+                        <p class="m-t-20">{{item.details}}</p>
+                        <a id="{{forloop.index}}{{item.link}}" class="btn btn-info-gradiant btn-rounded btn-md btn-arrow scroll-link" data-animation="animated fadeInLeft" href="#{{item.link}}"> <span>SHOP <i class="ti-arrow-right"></i></span> </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+

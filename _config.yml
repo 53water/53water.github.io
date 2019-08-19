@@ -1,0 +1,49 @@
+title: Вода в Вашем доме
+description: '"Вода в вашем доме" предлагает свои услуги с 2009 года с целью привнесения культуры безопасного пользования чистой воды в сотни тысяч русских домов и домохозяйств. Вложенные вами деньги должны безотказно работать и приносить вам пользу, и комфорт!'
+url: https://water53.github.io
+enforce_ssl: 
+logo: /images/Water.svg
+lang: en_RU
+
+# shop: https://shop.expresscoffeeindia.com/
+# shop: '{{site.shop}}'
+# shop: '/shop/'
+
+baseurl: /water53
+
+analytics: UA-115749700-1
+
+facebook:
+ app_id:
+ publisher:
+ admins:
+
+
+google_site_verification:
+
+
+# form-entry: https://docs.google.com/spreadsheets/d/14KCGIs5lSbP1rYAPBSvmlX52FbErwj_34L-u3fu2crU/edit?usp=forms_web_b#gid=373835449
+
+
+
+
+#compress.html
+compress_html:
+  clippings: [html,div, p, ul, td, h1, h2, h3, h4, h5, h6, link, meta, footer, nav, img, header, hr, br, head, style, li, ul, ol, time, main, script, title, input, form, iframe, textarea]
+  comments: [<!--, -->]
+  endings: [all]
+  ignore:
+    envs: [local]
+  blanklines: false
+  profile: false
+  startings: []
+
+sass:
+    style: compressed
+
+plugins:
+    - jekyll-seo-tag
+
+# Build settings
+markdown: kramdown
+permalink: pretty

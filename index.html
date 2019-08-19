@@ -1,0 +1,102 @@
+---
+layout: default
+image: /images/royal-roast-500g---products.jpg
+---
+
+<div class="preloader">
+            <div class="loader">
+                <div class="loader__figure"></div>
+                <p class="loader__label">Вода в вашем доме</p>
+            </div>
+    </div>
+
+    <div id="main-wrapper">
+       {% include header.html %}
+
+        <div class="page-wrapper">
+
+            <div class="container-fluid">
+
+                {% include slider.html %}
+                {% include technology.html %}
+                {% include products.html %}
+                {% include services.html %}
+                <!-- {% include customers.html %} -->
+                {% include contact-us.html %}
+                {% include partners.html %}
+
+
+            </div>
+
+
+            {% include footer.html %}
+
+            <a class="bt-top btn btn-circle btn-lg btn-info" href="#top"><i class="ti-arrow-up"></i></a>
+        </div>
+
+    </div>
+
+    <script src="{{site.baseurl}}/js/jquery.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="{{site.baseurl}}/js/popper.min.js"></script>
+    <script src="{{site.baseurl}}/js/bootstrap.min.js"></script>
+    <!-- This is for the animation -->
+    <script src="{{site.baseurl}}/js/aos.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="{{site.baseurl}}/js/custom.min.js"></script>
+
+    <script src="{{site.baseurl}}/js/owl.carousel.min.js"></script>
+    <!-- Jquery touchSwipe -->
+    <script src="{{site.baseurl}}/js/jquery.touchSwipe.min.js"></script>
+    <script src="{{site.baseurl}}/js/bootstrap-touch-slider.min.js"></script>
+    <script src="{{site.baseurl}}/js/jquery.waypoints.min.js"></script>
+    <script src="{{site.baseurl}}/js/jquery.counterup.min.js"></script>
+
+
+
+    <script type="text/javascript">
+    $('#slider4').bsTouchSlider();
+    $(".carousel .carousel-inner").swipe({
+        swipeLeft: function(event, direction, distance, duration, fingerCount) {
+            this.parent().carousel('next');
+        },
+        swipeRight: function() {
+            this.parent().carousel('prev');
+        },
+        threshold: 0
+    });
+
+    $('.counter').counterUp({
+        delay: 1
+    });
+
+    $('.testi9').owlCarousel({
+        loop: true,
+        margin: 30,
+        nav: false,
+        dots: true,
+        autoplay: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+
+            },
+            1650: {
+                items: 1
+            }
+        }
+    })
+    </script>
+
+<script src="{{site.baseurl}}/js/smooth-scroll.min.js"></script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=1409800599270506&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+{% include analytics-lite.html %}

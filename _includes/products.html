@@ -1,0 +1,53 @@
+<div id="products" class="spacer bg-light">
+    <div class="container">
+        <!-- Row  -->
+        <div class="row justify-content-center">
+            <div class="col-md-7 text-center">
+               {% for item in site.data.details.page-headers.products %}
+               <h2 class="title">{{item.title}}</h2>
+                <h6 class="subtitle">{{item.details}}</h6>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Row  -->
+        <div class="row m-t-40">
+           {% for item in site.posts %}
+            <!-- Column -->
+            <div id="{{item.link}}" class="col-md-6 p40">
+                <div class="card card-shadow aos-init" data-aos="{% if forloop.index == 1 %}flip-left{% elsif forloop.index == 2 %}flip-right{% elsif forloop.index == 3 %}flip-left{% else %}flip-right{% endif %}" data-aos-duration="1200">
+                    <a class="img-ho" data-toggle="modal" data-target="#{{item.link}}{{forloop.index}}"><img class="card-img-top" src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.details}}"></a>
+                    <div class="card-body" data-toggle="modal" data-target="#{{item.link}}{{forloop.index}}">
+                        <h5 class="font-medium m-b-10">{{item.title}}</h5>
+                        <p class="m-b-0 font-14">{{item.details}} <a id="{{forloop.index}}{{item.link}}" class=" btn btn-info-gradiant btn-rounded btn-md btn-arrow scroll-link" data-animation="animated fadeInLeft" href="#{{item.link}}"> <span>SHOP <i class="ti-arrow-right"></i></span> </a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal fade ml-auto" id="{{item.link}}{{forloop.index}}" tabindex="-1" role="dialog" aria-labelledby="{{item.link}}{{forloop.index}}" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content"><!-- <img src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.details}}">-->
+                        <div class="owl-carousel owl-theme testi9">
+                            {% for imgslide in item.img %}
+                            <div class="modal-header no-block align-items-center">
+                                <div class="p-50"><img src="{{site.baseurl}}/images/{{imgslide.image}}" class="img-responsive img-centered" alt="{{item.title}}">
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div> 
+                        <div class="modal-body">
+                            <h2 align="center" class="modal-title">{{item.title}}</h2>
+                            <br>
+                            <h5 align="justify">{{item.content}}</h5>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <!--<button class="snipcart-add-item btn btn-sm btn-success float-right" data-item-id="6" data-item-name="Fruit Tea" data-item-price="4.59" data-item-weight="100" data-item-url="https://dragonfruit.jekyll-themes.com/products/" data-item-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." data-item-max-quantity="5">Add to cart </button>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+

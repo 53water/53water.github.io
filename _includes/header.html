@@ -1,0 +1,46 @@
+<div class="topbar fixed-header animated slideInDown">
+    <div class="header5">
+        <div class="container po-relative">
+            <nav class="navbar navbar-expand-lg hover-dropdown h5-nav-bar">
+                <a  href="#home" class="navbar-brand scroll-link"><img src="{{site.baseurl}}/images/Waterx200.svg" alt="Водоснабжение частных домов"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#h5-info" aria-expanded="false" aria-label="Toggle navigation"><span class="ti-menu"></span></button>
+                <div class="collapse navbar-collapse" id="h5-info">
+                    <ul class="navbar-nav">
+                        {% for item in site.data.details.page-headers.menu %}
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="{{item.link}}" >{{item.title}} </a>
+                        </li>
+                        {% endfor %}
+
+                        <!-- <li class="nav-item">
+                            <a class="nav-link scroll-link" href="#technology" >Technology </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="#products">Products </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="#services">Services </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="#testimonials">Testimonials </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="#team">Team </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link scroll-link" href="#contact">Contact Us </a>
+                        </li> -->
+
+                    </ul>
+                    <!-- <div class="rounded-button">
+                        <a href="#">Shop</a>
+                    </div> -->
+                </div>
+            </nav>
+        </div>
+    </div>
+</div>
+
+

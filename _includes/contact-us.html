@@ -1,0 +1,34 @@
+<div id="contact" class="spacer feature26">
+    <div class="container">
+
+       <div class="row justify-content-center">
+            <div class="col-md-12 text-center m-b-40  aos-init aos-animate" data-aos="fade-up" data-aos-duration="1800" data-aos-easing="linear"><img src="{{site.baseurl}}/images/best-coffee-bag.svg" alt="Coffee Express Best Coffee in India" class="img-fluid"></div>
+           </div>
+        <div class="row">
+            <!-- column -->
+            <div class="col-lg-6 align-self-center">
+            {% for item in site.data.details.page-headers.contact %}
+                <h2 class="title m-t-0">{{item.title}}</h2>
+                <p class="m-t-30">{{item.details}}</p>
+            {% endfor %}
+
+                        <script type="text/javascript">var submitted=false;</script>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='';}"></iframe>
+                        <form class="contact-form rev" action="https://getsimpleform.com/messages?form_api_token=04e90985c056aca96d709f9d07633cdd" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                        <input type="hidden" name="_subject" value="обращение с сайта"/>
+                        <!-- <input type='hidden' name='redirect_to' value='{{site.url}}/thank-you/' /> 
+                        <input class="form-control"  type='text' name='entry.124556513' placeholder="Your name"/>
+                        <input class="form-control"  type='email' name='entry.2073606497' placeholder="Your email"/>-->
+                        <input class="form-control"  type='tel' name='phone' id="phone" placeholder="Ваш номер телефона"/>
+                        <textarea class="form-control textarea"  type='text' name='message' id="message" placeholder="Сообщение" rows="3"></textarea>
+
+                        <input class="btn btn-info-gradiant" type='submit' value='Отправить' id="submit"/>
+                        </form>
+            </div>
+            <!-- column -->
+            <div class="col-lg-6 text-center">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2083.321505958156!2d31.26882731590807!3d58.52278228246769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46beea37061f1de7%3A0x887258f386f628e3!2sPobedy-Sofiyskaya+Ploshchad&#39;%2C+Veliky+Novgorod%2C+Novgorodskaya+oblast&#39;!5e0!3m2!1sen!2sru!4v1565854880843!5m2!1sen!2sru" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>

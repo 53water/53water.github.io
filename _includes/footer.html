@@ -1,0 +1,99 @@
+<div class="footer2 font-14 bg-dark">
+    {% for item in site.data.details.page-headers.footer %}
+    <div class="f2-topbar container">
+        <div class="d-flex">
+            <a href="#"><img src="{{site.baseurl}}/images/Water.svg" alt="Водоснабжение частных домов"></a>
+            <div class="ml-auto align-self-center copy">
+                <span class="text-white">{{item.copyrights}}</span> © 2019 Все права защищены.<br> <p class="text-right">Разработан <a href="https://vk.com/id466853316" class="text-white">Роман Иванов</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="f2-middle">
+        <div class="container">
+            <div class="row">
+                <!-- Column -->
+                <div class="col-lg-4 col-md-6">
+                    <p class="p-t-10">{{item.about}}</p>
+                    <div class="m-t-20 m-b-30">
+                        <!-- <a href="https://facebook.com/{{item.facebook}}" class="link"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="link"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="link"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="link"><i class="fa fa-pinterest"></i></a>
+                        <a href="#" class="link"><i class="fa fa-instagram"></i></a> -->
+                        <div id="ok_group_widget"></div>
+                        <script>
+                        !function (d, id, did, st) {
+                          var js = d.createElement("script");
+                          js.src = "https://connect.ok.ru/connect.js";
+                          js.onload = js.onreadystatechange = function () {
+                          if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
+                            if (!this.executed) {
+                              this.executed = true;
+                              setTimeout(function () {
+                                OK.CONNECT.insertGroupWidget(id,did,st);
+                              }, 0);
+                            }
+                          }};
+                          d.documentElement.appendChild(js);
+                        }(document,"ok_group_widget","57076631601392",'{"width":200,"height":175}');
+                        </script>
+                    </div>
+                </div>
+                <!-- Column -->
+                <div class="col-lg-2 col-md-6">
+                    <ul class="general-listing">
+                       {% for item in site.data.details.page-headers.menu %}
+                        <li><a href="{{item.link}}" class="scroll-link"><i class="fa fa-circle"></i> {{item.title}}</a></li>
+                       {% endfor %}
+                    </ul>
+                </div>
+                <!-- Column -->
+                <!-- Column -->
+                <div class="col-lg-3 col-md-6 info-box">
+                    <div class="d-flex no-block">
+                        <div class="display-7 m-r-20 align-self-top"><i class="icon-Location-2"></i></div>
+                        <div class="info">
+                                <p>{{item.address}}</p>
+
+                        </div>
+                    </div>
+                    <div class="d-flex no-block">
+                        <div class="display-7 m-r-20 align-self-top"><i class="icon-Phone-2"></i></div>
+                        <div class="info">
+                            <span class="font-medium text-muted db  m-t-5"><a class="text-muted" href="tel:{{item.phone}}">{{item.phone}}</a></span>
+                        </div>
+                    </div>                    
+                    <div class="d-flex no-block">
+                        <div class="display-7 m-r-20 align-self-top"><i class="icon-Over-Time"></i></div>
+                        <div class="info">
+                            <span class="font-medium text-muted db  m-t-5">9.00 AM - 9:00PM<br>Пн-вс. Ответим на любой вопрос.</span>
+                        </div>
+                    </div>
+                    <div class="d-flex no-block">
+                        <div class="display-7 m-r-20 align-self-top"><i class="icon-Mail"></i></div>
+                        <div class="info">
+                            <a href="mailto:{{item.email}}" class="font-medium text-muted db  m-t-5">{{item.email}}</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <!-- Column -->
+                <!--<div class="col-lg-3 col-md-6">
+                    <div class="subscribe-box">
+                        <div class="display-4 text-white"><i class="icon-Mail-3"></i></div>
+                        <p>{{item.subscribe}}</p>
+                        <form lpformnum="1" action="https://water.us12.list-manage.com/subscribe/post?u=075bf32c791630a0445b596ee&amp;id=f24396a370" method="post">
+                            <div class="m-b-20">
+                                <input class="form-control required email" type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="ваша почта">
+                            </div>
+                            <button class="btn btn-info-gradiant">JOIN US</button>
+                        </form>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+

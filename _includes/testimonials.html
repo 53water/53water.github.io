@@ -1,0 +1,73 @@
+
+<div id="testimonials" class="testimonial9 spacer bg-light">
+
+    <div class="container">
+        <br>
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center m-b-40  aos-init aos-animate" data-aos="fade-up" data-aos-duration="1800" data-aos-easing="linear"><img src="{{site.baseurl}}/images/coffee-cup-large.svg" alt="Coffee Express India" class="img-fluid"></div>
+           </div>
+           <br>
+           <br>
+        <div class="row">
+            <div class="col-lg-5 col-md-6">
+               {% for item in site.data.details.page-headers.testimonials %}
+                <h2 class="m-t-40">{{item.title}}</h2>
+                <span class="devider bg-danger"></span>
+                <p>{{item.details}}</p>
+                <!-- <a href="" class="btn btn-info-gradiant">Write a Review</a> -->
+                {% endfor %}
+            </div>
+            <div class="col-lg-6 col-md-6 ml-auto">
+                <div class="owl-carousel owl-theme testi9">
+                   {% for item in site.data.details.testimonials %}
+                    <!-- item -->
+                    <div class="item">
+                        <div class="card card-shadow">
+                            <div class="p-40">
+                                <h5 class="text">{{item.details}}</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex no-block align-items-center">
+                            <div class="customer-thumb"><img src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.title}}" class="circle" /></div>
+                            <div class="">
+                                <h6 class="font-bold m-b-0">{{item.title}}</h6><span class="font-13">{{item.position}}</span></div>
+                        </div>
+                    </div>
+                    <!-- item -->
+                    {% endfor %}
+
+            <!--         <div class="item">
+                        <div class="card card-shadow">
+                            <div class="p-40">
+                                <h5 class="text">WrapKit has given our websites huge national presence. We are #1 on page one in Google search results for every website we’ve built, and rank for more keywords than I ever expected in a very competitive, high-value customer industry. In addition,</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex no-block align-items-center">
+                            <div class="customer-thumb"><img src="images/2.jpg" alt="{{site.title}}" class="circle" /></div>
+                            <div class="">
+                                <h6 class="font-bold m-b-0">Michael Anderson</h6><span class="font-13">Project client</span></div>
+                        </div>
+                    </div>
+                    item
+                    item
+                    <div class="item">
+                        <div class="card card-shadow">
+                            <div class="p-40">
+                                <h5 class="text">WrapKit has given our websites huge national presence. We are #1 on page one in Google search results for every website we’ve built, and rank for more keywords than I ever expected in a very competitive, high-value customer industry. In addition,</h5>
+                            </div>
+                        </div>
+                        <div class="d-flex no-block align-items-center">
+                            <div class="customer-thumb"><img src="images/3.jpg" alt="{{site.title}}" class="circle" /></div>
+                            <div class="">
+                                <h6 class="font-bold m-b-0">Michael Anderson</h6><span class="font-13">Project client</span></div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
+
