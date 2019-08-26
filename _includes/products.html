@@ -18,25 +18,46 @@
                     <a class="img-ho" data-toggle="modal" data-target="#{{item.link}}{{forloop.index}}"><img class="card-img-top" src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.details}}"></a>
                     <div class="card-body" data-toggle="modal" data-target="#{{item.link}}{{forloop.index}}">
                         <h5 class="font-medium m-b-10">{{item.title}}</h5>
-                        <p class="m-b-0 font-14">{{item.details}} <a id="{{forloop.index}}{{item.link}}" class=" btn btn-info-gradiant btn-rounded btn-md btn-arrow scroll-link" data-animation="animated fadeInLeft" href="#{{item.link}}"> <span>SHOP <i class="ti-arrow-right"></i></span> </a></p>
+                        <p class="m-b-0 font-14">{{item.details}}</p>
+                        <br>
+                        <a class="btn btn-info-gradiant btn-rounded btn-md btn-arrow" id="lol{{forloop.index}}" data-animation="animated fadeInLeft" href="#{{item.link}}"> <span>Связаться с инженером <i class="ti-arrow-right"></i></span></a>
+                        <!--<button type="button" class="btn btn-info-gradiant btn-rounded btn-md btn-arrow" id="{{forloop.index}} " data-toggle="modal" data-target="#{{item.link}}{{forloop.index}}">Связаться с инженером!</button>-->
+                        <!--<script src="{{site.baseurl}}/js/onclick.js"></script>-->
                     </div>
                 </div>
             </div>
             <div class="modal fade ml-auto" id="{{item.link}}{{forloop.index}}" tabindex="-1" role="dialog" aria-labelledby="{{item.link}}{{forloop.index}}" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                    <div class="modal-content"><!-- <img src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.details}}">-->
+                    <div class="post-share-modal modal-content"><!-- <img src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.details}}">-->
+                        <div class="modal-header">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <div>
+                                <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&title={{ page.title }}" class="btn btn-social btn-facebook">
+                                    <span class="fa fa-facebook"></span>Facebook</a>
+                                <a href="mailto:?&subject=Blog%20Post:%20{{ page.title }}&body=Check%20out%20this%20amazing%20blog%20post!%20{{ site.url }}{{ page.url }}" class="btn btn-social btn-email">
+                                    <span class="fa fa-envelope"></span>Email</a>
+                            </div>
+                        </div>
                         <div class="owl-carousel owl-theme testi9">
                             {% for imgslide in item.img %}
-                            <div class="modal-header no-block align-items-center">
-                                <div class="p-50"><img src="{{site.baseurl}}/images/{{imgslide.image}}" class="img-responsive img-centered" alt="{{item.title}}">
+                                <div class="no-block align-items-center">
+                                    <div class="p-50"><img src="{{site.baseurl}}/images/{{imgslide.image}}" class="img-responsive img-centered" alt="{{item.title}}">
+                                    </div>
                                 </div>
-                            </div>
                             {% endfor %}
                         </div> 
                         <div class="modal-body">
-                            <h2 align="center" class="modal-title">{{item.title}}</h2>
-                            <br>
                             <h5 align="justify">{{item.content}}</h5>
+                            <br>
+                            <div>
+                                <h3>Post Address</h3>
+                                <p>
+                                  A direct link to this post!
+                                </p>
+                                <input type="text" id="windowurl{{forloop.index}}" value="{{site.baseurl}}/#{{item.link}}" />
+                                <a href="#" data-copytarget="#windowurl{{forloop.index}}" class="btn btn-primary btn-rounded">Copy</a>
+                            </div>
+                            <!--<h2 align="center" class="modal-title">{{item.title}}</h2>-->
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -45,9 +66,57 @@
                     </div>
                 </div>
             </div>
+            <!--<script type="text/javascript">
+                $(document).ready(function () {
+                    $("#lol{{forloop.index}}").click(function () {
+                        var windowLoc = window.location.href;
+                        /* $("input#windowurl{{forloop.index}}").val(windowLoc); */
+                        document.querySelector("input#windowurl{{forloop.index}}").setAttribute("value", windowLoc);
+                        (function () {
+                            'use strict';
+                            document.body.addEventListener('click', copy, true);
+                            function copy(e) {
+                                var
+                                    t = e.target,
+                                    c = t.dataset.copytarget,
+                                    inp = (c ? document.querySelector(c) : null);
+                                if (inp && inp.select) {
+                                    inp.select();
+                                    try {
+                                        document.execCommand('copy');
+                                        inp.blur();
+                                        t.classList.add('copied');
+                                        setTimeout(function () {
+                                            t.classList.remove('copied');
+                                        }, 1500);
+                                    } catch (err) {
+                                        alert('please press Ctrl/Cmd+C to copy');
+                                    }
+                                }
+                            }
+                        });
+                    });
+                });
+                $(document).ready(function() {
+                if(window.location.href.indexOf('#{{item.link}}') != -1) {
+                    $('#{{item.link}}{{forloop.index}}').modal('show');
+            </script>-->
             {% endfor %}
         </div>
     </div>
 </div>
+<!--
+    jQuery(document).ready(function() {
+        jQuery('.btn[href^=#]').click(function(e){
+            e.preventDefault();
+            var href = jQuery(this).attr('href');
+            jQuery(href).modal('toggle');
+        });
+
+
+                    $(document).ready(function() {
+                if(window.location.href.indexOf('#{{item.link}}') != -1) {
+                    $('#{{item.link}}{{forloop.index}}').modal('show');
+-->
 
 

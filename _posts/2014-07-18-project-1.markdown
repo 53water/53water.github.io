@@ -4,7 +4,7 @@ modal-id: 1
 title: Водоснабжение Великий Новгород и область
 details: Всё от поиска воды до её потребления под ключ
 details_slider: Все работы от поиска воды до установки приборов потребления в вашем доме и на вашем участке под ключ!
-image_slider: Royal-500g-5.jpg
+image_slider: 0111.png
 link: 'Vodosnabjenie'
 image: razvodka.jpg
 icon: vodosnabjenie.svg

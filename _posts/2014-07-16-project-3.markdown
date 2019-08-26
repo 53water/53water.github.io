@@ -4,7 +4,7 @@ modal-id: 3
 title: Септики Великий Новгород и область
 details: Подбор, конструирование, установка септика под ключ
 details_slider: Все работы по подбору септика, его конструкции и месторасположения на вашем участке, монтаж под ключ!
-image_slider: Classic-500g-slide5.jpg
+image_slider: 0333.png
 link: 'Septik'
 image: DSCN0037.jpg
 icon: septik.svg

@@ -3,9 +3,9 @@
         <div class="row justify-content-center">
             <div class="col-md-12 text-center m-b-20  aos-init aos-animate" data-aos="fade-up" data-aos-duration="1800" data-aos-easing="linear"><img src="{{site.baseurl}}/images/products.svg" alt="Coffee Express India" class="img-fluid"></div>
             <div class="col-md-7 text-center">
-               {% for item in site.data.details.page-headers.technology %}
-                <h2 class="title">{{item.title}}</h2>
-                <h6 class="subtitle">{{item.details}}</h6>
+                {% for item in site.data.details.page-headers.technology %}
+                    <h2 class="title">{{item.title}}</h2>
+                    <h6 class="subtitle">{{item.details}}</h6>
                 {% endfor %}
             </div>
         </div>
@@ -19,7 +19,7 @@
                         <div class="icon-space"><i class="display-5 {{item.icon}}"></i></div>
                         <h5 class="font-medium">{{item.title}}</h5>
                         <p class="m-t-20">{{item.details}}</p>
-                        <a id="{{forloop.index}}{{item.link}}" class="btn btn-info-gradiant btn-rounded btn-md btn-arrow scroll-link" data-animation="animated fadeInLeft" href="#{{item.link}}"> <span>SHOP <i class="ti-arrow-right"></i></span> </a>
+                        <a id="{{forloop.index}}{{item.link}}" class="btn btn-info-gradiant btn-rounded btn-md btn-arrow scroll-link btn-danger" data-animation="animated fadeInLeft" href="#{{item.link}}"> <span>{{item.call}} <i class="ti-arrow-right"></i></span> </a>
                     </div>
                 </div>
             </div>

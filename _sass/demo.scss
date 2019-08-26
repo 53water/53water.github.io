@@ -31,7 +31,7 @@ Header 5
   width: 100%;
   left: 0px; }
   .h5-nav-bar .navbar-nav .nav-link {
-    color: #263238;
+    color: #000000;
     font-size: 14px;
     padding: 25px 18px;
     font-weight: 500;
@@ -111,8 +111,15 @@ slide 4
   animation: imagescale 15s ease-in-out infinite alternate;
   -webkit-animation: imagescale 15s ease-in-out infinite alternate;
   -moz-animation: imagescale 15s ease-in-out infinite alternate;
-  -o-webkit-animation: imagescale 15s ease-in-out infinite alternate; }
-
+  -o-webkit-animation: imagescale 15s ease-in-out infinite alternate;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    filter: blur(5px); }
+/*******************
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    filter: blur(5px); 
+*******************/
 .slider4 .carousel-indicators {
   bottom: 0; }
   .slider4 .carousel-indicators li {
@@ -136,11 +143,12 @@ slide 4
 
 .slider4 h1 {
   font-size: 48px;
+  color: #ffffff;
   line-height: 58px; }
 
 .slider4 p {
   font-size: 18px;
-  color: #263238;
+  color: #ffffff;
   margin-bottom: 35px; }
 
 .slider4 .slider-control span {

@@ -13,11 +13,11 @@ page-headers:
         - title: Услуги
           link: '#services'
 
-        - title: Партнеры
-          link: '#partners'
-
         - title: Контакты
           link: '#contact'
+
+        - title: Партнеры
+          link: '#partners'
     
     technology:
         - title: Водоснабжение, водоотведение, дренаж для частных жилых домов, дач и бань в Великом Новгороде и Новгородской области
@@ -35,11 +35,11 @@ page-headers:
 
     products:
        - title: Нужен автономный водопровод, автономная канализация, не знаете с чего начать? Есть начатые работы, а так же идеи и вы хотете их воплотить? Звоните нам!
-         details: 
+         details:
           
     services: 
-       - title: Остались вопросы? 
-         details: Our customer service is focused on providing the best support & service to our customers. Reach out to us for any issues, complaints or suggestions.
+       - title:
+         details:
          minutes: 30
          projects: 300
          addons: 0
@@ -75,14 +75,17 @@ technology:
     - title: Удобно
       details: Предварительный расчёт по телефону. Бесплатный выезд инженера на участок (и в отдалённые населённые пункты!), бесплатная доставка оборудования, оплата по факту монтажа. 
       icon: icon-Handshake
+      call: Заказать звонок
       
     - title: Индивидуальный подход к клиенту
       details: Потому, что наш опыт работы на рынке услуг в Великом Новгороде более 10 лет. Гарантия на все виды работ.
       icon: icon-Idea-4
-      
-    - title: Работа со пециализированной техникой
+      call: Заказать септик и установку
+
+    - title: Работа со специализированной техникой
       details: Дисциплинированная бригада, cпецинструмент, миниэкскаваторы, экскаваторы погрузчики, самосвалы, ассенизаторы.
       icon: icon-Gears
+      call: Уточнить возможность работ
 
 products:
 

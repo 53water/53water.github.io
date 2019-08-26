@@ -10,16 +10,16 @@
 
     {% for item in site.posts %}
         <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
-            <!-- Slide Background --><img src="{{site.baseurl}}/images/{{item.image_slider}}" alt="{{site.title}}" class="slide-image" />
+            <!-- Slide Background --><img src="{{site.baseurl}}/images/slider/{{item.image_slider}}" alt="{{site.title}}" class="slide-image" />
             <!-- Slide Text Layer -->
             <div class="slide-text slide_style_left">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9 col-lg-6">
                             <h1 data-animation="animated fadeInLeft" class="title font-bold m-0 p-b-40">{{item.title}}</h1>
-                            <p>{{item.details_slider}}</p>
+                            <p class="font-bold">{{item.details_slider}}</p>
                             <div>
-                                <a id="{{forloop.index}}{{item.link}}" class=" btn btn-info-gradiant btn-rounded btn-md btn-arrow scroll-link" data-animation="animated fadeInLeft" href="#{{item.link}}"> <span>SHOP <i class="ti-arrow-right"></i></span> </a>
+                                <a id="{{forloop.index}}{{item.link}}" class="btn btn-info-gradiant btn-rounded btn-md btn-arrow" data-animation="animated fadeInLeft" href="#{{item.link}}"> <span>SHOP <i class="ti-arrow-right"></i></span> </a>
                                <!--  <a class="btn btn-outline-inverse btn-rounded btn-md btn-arrow m-l-20" data-animation="animated fadeInLeft" data-toggle="collapse" href="#"> <span>CHECK FEATURES <i class="ti-arrow-right"></i></span> </a> -->
                             </div>
                         </div>
@@ -39,26 +39,32 @@
                 }, 1000);
             }); 
         });
-        </script>-->
-        <script type="text/javascript">
-        $(document).ready(function() {
-            var url = window.location.href;
-            if (url.indexOf('#{{item.link}}') != -1) {
-                $('#{{item.link}}{{forloop.index}}').modal({
-                    backdrop: 'true',
-                    keyboard: true
-                });
-            }
-        });
-        $(document).ready(function() {
-            $('#{{forloop.index}}{{item.link}}').click(function() {
-                $('#{{item.link}}{{forloop.index}}').modal({
-                    backdrop: 'true',
-                    keyboard: true
-                })
-            }
-        )});
         </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var url = window.location.href;
+        if (url.indexOf('#{{item.link}}') != -1) {
+            $('#{{item.link}}{{forloop.index}}').modal({
+                backdrop: 'true',
+                keyboard: true
+            });
+        }
+    });-->
+    <script type="text/javascript">
+    $(document).ready(function() {
+        if(window.location.href.indexOf('#{{item.link}}') != -1) {
+            $('#{{item.link}}{{forloop.index}}').modal('show');
+        }
+    });
+    $(document).ready(function() {
+        $('#{{forloop.index}}{{item.link}}').click(function() {
+            $('#{{item.link}}{{forloop.index}}').modal({
+                backdrop: 'true',
+                keyboard: 'true'
+            })
+        }
+    )});
+    </script>
     {% endfor %}
         <!-- End of Slide -->
         <!-- End of Wrapper For Slides -->
