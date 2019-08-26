@@ -9,7 +9,7 @@ lang: en_RU
 # shop: '{{site.shop}}'
 # shop: '/shop/'
 
-baseurl: /voda53.github.io/water53.github.io
+baseurl:
 
 analytics: UA-115749700-1
 
