@@ -51,16 +51,16 @@
         }
     });-->
     <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
         if(window.location.href.indexOf('#{{item.link}}') != -1) {
             $('#{{item.link}}{{forloop.index}}').modal('show');
         }
     });
-    $(document).ready(function() {
-        $('#{{forloop.index}}{{item.link}}').click(function() {
+    $(document).ready(function () {
+        $("#{{forloop.index}}{{item.link}}").click(function () {
             $('#{{item.link}}{{forloop.index}}').modal({
                 backdrop: 'true',
-                keyboard: 'true'
+                keyboard: true
             })
         }
     )});

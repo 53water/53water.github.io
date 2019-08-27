@@ -1,32 +1,23 @@
-$(document).ready(function() {
-    $('#{{forloop.index}}').click(function() {
+$(document).ready(function () {
+    $("#lol{{forloop.index}}").click(function () {
         var windowLoc = window.location.href;
-        $("input#windowurl").val(windowLoc);
-        /*
-            Copy text from any appropriate field to the clipboard
-        */
-        (function() {
+        /* $("input#windowurl{{forloop.index}}").val(windowLoc); */
+        document.querySelector("input#windowurl{{forloop.index}}").setAttribute("value", windowLoc);
+        (function () {
             'use strict';
-            // click events
             document.body.addEventListener('click', copy, true);
-            // event handler
             function copy(e) {
-                // find target element
                 var
                     t = e.target,
                     c = t.dataset.copytarget,
                     inp = (c ? document.querySelector(c) : null);
-                // is element selectable?
                 if (inp && inp.select) {
-                    // select text
                     inp.select();
                     try {
-                        // copy text
                         document.execCommand('copy');
                         inp.blur();
-                        // copied animation
                         t.classList.add('copied');
-                        setTimeout(function() {
+                        setTimeout(function () {
                             t.classList.remove('copied');
                         }, 1500);
                     } catch (err) {
@@ -34,6 +25,6 @@ $(document).ready(function() {
                     }
                 }
             }
-        })();
-    })
+        });
+    });
 });
