@@ -28,11 +28,9 @@
             </div>
             <div class="modal fade ml-auto" id="{{item.link}}{{forloop.index}}" tabindex="-1" role="dialog" aria-labelledby="{{item.link}}{{forloop.index}}" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                    <div class="post-share-modal modal-content"><!-- <img src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.details}}">-->
+                    <div class="modal-content"><!-- <img src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.details}}">-->
                         <div class="modal-header">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <input type="text" id="windowurl{{forloop.index}}" value="{{site.url}}/#{{item.link}}" />
-                            <a href="#" data-copytarget="#windowurl{{forloop.index}}" class="btn btn-primary btn-rounded">Copy</a>
                         </div>
                         <div class="owl-carousel owl-theme testi9">
                             {% for imgslide in item.img %}
@@ -44,10 +42,16 @@
                         </div> 
                         <div class="modal-body">
                             <h5 align="justify">{{item.content}}</h5>
-                            <!--<h2 align="center" class="modal-title">{{item.title}}</h2>-->
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary btn-social" data-dismiss="modal">Close</button>
+                            <input type="text" id="windowurl{{forloop.index}}" value="{{site.url}}/#{{item.link}}" style="position: absolute; left: -1000px; top: -1000px">
+                            <a href="#" class="button1" data-copytarget="#windowurl{{forloop.index}}">
+                                <div class="container">
+                                    <span data-copytarget="#windowurl{{forloop.index}}" class="normal fa fa-clipboard"> ссылка</span>
+                                    <span data-copytarget="#windowurl{{forloop.index}}" class="hover fa fa-clipboard">    Жми</span>
+                                    <span data-copytarget="#windowurl{{forloop.index}}" class="copied fa fa-clipboard"> Готово!</span>
+                                </div>
+                            </a>
                             <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}&title={{ page.title }}" class="btn btn-social btn-facebook">
                                 <span class="fa fa-facebook"></span>Facebook</a>
                             <a href="mailto:?&subject=Blog%20Post:%20{{ page.title }}&body=Check%20out%20this%20amazing%20blog%20post!%20{{ site.url }}{{ page.url }}" class="btn btn-social btn-email">
@@ -61,18 +65,3 @@
         </div>
     </div>
 </div>
-<!--
-    jQuery(document).ready(function() {
-        jQuery('.btn[href^=#]').click(function(e){
-            e.preventDefault();
-            var href = jQuery(this).attr('href');
-            jQuery(href).modal('toggle');
-        });
-
-
-                    $(document).ready(function() {
-                if(window.location.href.indexOf('#{{item.link}}') != -1) {
-                    $('#{{item.link}}{{forloop.index}}').modal('show');
--->
-
-
