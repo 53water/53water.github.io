@@ -6,6 +6,7 @@ details: Подбор, конструирование, установка сеп
 details_slider: Все работы по подбору септика, его конструкции и месторасположения на вашем участке, монтаж под ключ!
 image_slider: 0333.png
 link: 'Septik'
+link1: '#Septik'
 image: DSCN0037.jpg
 icon: septik.svg
 img:
