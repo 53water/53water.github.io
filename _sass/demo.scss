@@ -112,13 +112,13 @@ slide 4
   -webkit-animation: imagescale 15s ease-in-out infinite alternate;
   -moz-animation: imagescale 15s ease-in-out infinite alternate;
   -o-webkit-animation: imagescale 15s ease-in-out infinite alternate;
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    filter: blur(5px); }
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    filter: blur(0px); }
 /*******************
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    filter: blur(5px); 
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    filter: blur(0px); 
 *******************/
 .slider4 .carousel-indicators {
   bottom: 0; }
