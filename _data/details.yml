@@ -22,16 +22,6 @@ page-headers:
     technology:
         - title: Водоснабжение, водоотведение, дренаж для частных жилых домов, дач и бань в Великом Новгороде и Новгородской области
           details: Выезд на место <i class="icon-Arrow-Right"></i> Расчет стоимости <i class="icon-Arrow-Right"></i> Подбор оборудования материалов <i class="icon-Arrow-Right"></i> доставка <i class="icon-Arrow-Right"></i> монтаж <i class="icon-Arrow-Right"></i> обслуживание <i class="icon-Arrow-Right"></i> Гарантия На Все Виды Работ!
-          img:
-
-            - id: 1
-              image: vodosnabjenie.svg
-
-            - id: 2
-              image: vodootvedenie.svg
-
-            - id: 3
-              image: septik.svg
 
     products:
        - title: Нужен автономный водопровод, автономная канализация, не знаете с чего начать? Есть начатые работы, а так же идеи и вы хотете их воплотить? Звоните нам!
@@ -75,90 +65,45 @@ technology:
     - title: Удобно
       details: Предварительный расчёт по телефону. Бесплатный выезд инженера на участок (и в отдалённые населённые пункты!), бесплатная доставка оборудования, оплата по факту монтажа. 
       icon: icon-Handshake
-      call: Заказать звонок
+      call: Звонок инженеру
       
     - title: Индивидуальный подход к клиенту
       details: Потому, что наш опыт работы на рынке услуг в Великом Новгороде более 10 лет. Гарантия на все виды работ.
       icon: icon-Idea-4
-      call: Заказать септик и установку
+      call: Заказать звонок
 
     - title: Работа со специализированной техникой
       details: Дисциплинированная бригада, cпецинструмент, миниэкскаваторы, экскаваторы погрузчики, самосвалы, ассенизаторы.
       icon: icon-Gears
-      call: Уточнить возможность работ
+      call: Обсудить ваш дом
 
 products:
 
-    - title: Royal Roast
-      details: 100% Pure Ground Coffee
-      details_slider: 100% Pure Ground Coffee for Tasty, Rich & Strong Coffee Lovers. Coffee should be black as hell, strong as death and sweet as love!
-      image_slider: Royal-500g-5.jpg
-      link: 'Royal-Roast'
-      image: royal-roast-500g---products.jpg
+    - title:
+      details: 
+      details_slider:
+      image_slider: 
+      link: 
+      image: 
       img:
 
         - id: 1
-          image: lol1.jpg
+          image: 
 
         - id: 2
-          image: lol2.jpg
+          image:
 
         - id: 3
-          image: lol3.jpg
+          image:
 
-    - title: Ujwal
-      details: 70% Coffee, 30% Chicory
-      details_slider: Rich Blend of Coffee & Chicory to Kick off the day with a Perfect Cup of Coffee. What goes best with a cup of Coffee? Another cup!
-      image_slider: ujwal-500g-2.jpg
-      link: 'Ujwal'
-      image: ujwal-500g---products.jpg
-
-    - title: Express Classic
-      details: Perfect Blend of Coffee & Chicory
-      details_slider: Perfect Blend of Coffee with Chicory for a Tasty Coffee. May your coffee be strong and your Monday be short!
-      image_slider: Classic-500g-slide5.jpg
-      link: 'Express-Classic'
-      image: classic-500g---products.jpg
-
-    - title: Roasted Coffe Bean
-      details: Freshly Roasted Coffee Beans
-      details_slider: "For those who Like to Grind their own Coffee. If you've never had freshly ground coffee, you may not even realize there is a difference."
-      image_slider: Beans-500g.jpg
-      link: 'Roasted-Coffe-Bean'
-      image: roasted-bean-500g-products.jpg      
       
 testimonials:
 
-    - title: Pruthviraj Kowri
+    - title: ываывапвап
       position: Owner, Kowri Estate, Koppa
-      details: I have tried many different coffees before but Express coffee has the most authentic south Indian taste due to perfect blend of Coffee and Chicory without too much diluting the coffee flavour. Express classic and Ujwal offer enjoyable blend with right bitterness one can expect from pure Chikmagaluru coffee
-      image: Pruthviraj-Kowri.jpg
-      
-    - title: Pallavi Gowda
-      position: Executive Operations, Axis Bank
-      details: I love this coffee, it’s great, tasty, priced and delivered perfectly. Good part is, you get an option to buy freshly roasted coffee beans from Express Coffee, packaged nicely in aluminium foil sealed covers. Try this amazing roasted bean if you like to brew your own coffee.
-      image: Pallavi-Gowda.jpg
-      
-    - title: Geetha Thimmaiah
-      position: Housewife, Shivamogga
-      details: Strong, bold and superior quality coffee. My family loves it. It came packaged well with food grade aluminium foil covers, Vacuum sealed for freshness, shelf life is never an issue. I highly recommend trying Express Coffee products.
-      image: Geetha-Thimmaiah.jpg
-      
-    - title: Rajesh Gowda
-      position: Technology Manager, Hyderabad
-      details: Excellent coffee with excellent price. Products are superior to just about all other brands. I admire the consistency and taste of Express coffee. Delivered quickly with nice packaging. Highly recommend to try. Would purchase again.
-      image: Rajesh-Gowda.jpg
-      
-    - title: Roopa Hegde
-      position: IT Project Manager, Hyderabad 
-      details: Express Coffee has some of the best coffee to offer. I particularly liked Royal Roast which is pure coffee that makes a pretty strong and great tasting coffee. I would recommend everyone to try this amazing coffee!
-      image: Roopa-Hegde-1.jpg
-      
-    - title: Rajani Prathap
-      position: Co-owner, Gajanana Coffee Estate, Bankenahalli
-      details: Love this coffee. Rich, flavourful best tasting coffee for the money. Coffee is very smooth brown without any bitter taste. One of my favourite roast coffee. Price and service are great. I will buy again.
-      image: Rajani-Prathap.jpg
-      
+      details: ывавапапрарпропротпр
+      image: 
+
 team:
     
     - title: Иванов Роман

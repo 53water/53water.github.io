@@ -17,18 +17,21 @@
 				<h5 class="modal-title" id="exampleModalLabel">Перезвоните мне</h5>
 		  	</div>
 		  	<div class="modal-body">
-			  	<!--<div class="form-group">
-					<label for="name">Name</label>
-				  	<input id="name" class="form-control" type="text" placeholder="Name" />
-				</div>-->
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label for="tel">Ваш номер</label>
 					<input id="tel" class="form-control" type="tel" placeholder="+7.........." />
-				</div>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-				<button type="button" class="btn btn-primary">Отправить</button>
+				</div>-->
+				<form action="https://getsimpleform.com/messages?form_api_token=04e90985c056aca96d709f9d07633cdd" method="post">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                        <input type='tel' id="tel1" class="form-control" name='phone' placeholder="Ваш телефон для связи (дом/моб)"/>
+                        <input type="hidden" name="_subject" value="Вас просили перезвонить по телефону"/>
+                    </div>
+        			<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+						<button type="submit" class="btn btn-primary">Отправить</button>
+					</div>
+                </form>
 			</div>
 		</div>
 	</div>
@@ -41,79 +44,23 @@
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
-				<h5 class="modal-title" id="exampleModalLabel">Написать сообщение</h5>
+				<h5 class="modal-title" id="exampleModalLabel1">Написать сообщение</h5>
 			</div>
 			<div class="modal-body">
-				<div class="form-group">
-					<label for="name">Ваше имя</label>
-					<input id="name" class="form-control" type="text" placeholder="Ваше имя" />
-				</div>
-				<div class="form-group">
-					<label for="tel">Ваше сообщение</label>
-					<textarea id="tel" class="form-control" placeholder="Сообщение"></textarea>
-				</div>
+				<form action="https://getsimpleform.com/messages?form_api_token=04e90985c056aca96d709f9d07633cdd" method="post">
+                    <input type="hidden" name="_subject" value="обращение с указанием email"/>
+                    <div class="form-group">
+                    	<input id="email" class="form-control" type='email' name='email' placeholder="удобный адрес email" />
+                    </div>
+                    <div class="form-group">
+                    	<textarea id="message1" class="form-control textarea" type='text' name='message' placeholder="Сообщение" rows="3"></textarea>
+                    </div>
+                    <div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+						<button type="submit" class="btn btn-primary">Отправить</button>
+					</div>
+                </form>
 			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
-				<button type="button" class="btn btn-primary">Отправить</button>
-			</div>
 		</div>
 	</div>
 </div>
-<!-- Modal
-<div class="modal fade" id="DoctorModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-	<div class="modal-content">
-	  <div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>
-		<h5 class="modal-title" id="exampleModalLabel">Call a doctor</h5>
-	  </div>
-	  <div class="modal-body">
-		  <div class="form-group">
-			  <label for="Name">Name</label>
-			  <input id="name" class="form-control" type="text" placeholder="Name" />
-		</div>
-		<div class="form-group">
-			  <label for="tel">Phone number</label>
-			  <input class="form-control" type="text" placeholder="Enter your phone number" />
-		  </div>
-	  </div>
-	  <div class="modal-footer">
-		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		<button type="button" class="btn btn-primary">Save changes</button>
-	  </div>
-	</div>
-  </div>
-</div>
-
-	
-Modal
-<div class="modal fade" id="AppointmentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-	<div class="modal-content">
-	  <div class="modal-header">
-		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-		  <span aria-hidden="true">&times;</span>
-		</button>
-		<h5 class="modal-title" id="exampleModalLabel">Make an appointment</h5>
-	  </div>
-	  <div class="modal-body">
-		  <div class="form-group">
-			  <label for="name">Name</label>
-			  <input id="name" class="form-control" type="text" placeholder="Name" />
-		</div>
-		<div class="form-group">
-			  <label for="tel">Phone number</label>
-			  <input id="tel" class="form-control" type="tel" placeholder="Phone number" />
-		  </div>
-	  </div>
-	  <div class="modal-footer">
-		<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		<button type="button" class="btn btn-primary">Save changes</button>
-	  </div>
-	</div>
-  </div>
-</div>
--->

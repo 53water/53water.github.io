@@ -15,30 +15,21 @@
             <!-- Column -->
             <div id="{{item.link}}" class="col-md-6 p40">
                 <div class="card card-shadow aos-init" data-aos="{% if forloop.index == 1 %}flip-left{% elsif forloop.index == 2 %}flip-right{% elsif forloop.index == 3 %}flip-left{% else %}flip-right{% endif %}" data-aos-duration="1200">
-                    <a class="img-ho" data-toggle="modal" data-target="#{{item.link}}{{forloop.index}}"><img class="card-img-top" src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.details}}"></a>
-                    <a href="#!">
-                      <div class="mask rgba-white-slight"></div>
-                    </a>
+                    <a class="img-ho"><img class="card-img-top" src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.details}}"></a>
                     <div class="card-body">
-                    <!--<div class="card-body" data-toggle="modal" data-target="#{{item.link}}{{forloop.index}}">-->
                         <h5 class="font-medium m-b-10">{{item.title}}</h5>
                         <p class="m-b-0 font-14">{{item.details}}</p>
-                        <div class="collapse-content">
-                            <!--<p class="card-text collapse" id="collapseContent{{forloop.index}}">{{item.content}}</p>-->
-                            <p class="card-text collapse" id="collapseContent{{forloop.index}}">Recently, we added several exotic new dishes to the menu of our restaurant. They come from countries such as Mexico, Argentina, and Spain. Come to us, have a delicious wine and enjoy the juicy meals from around the world.</p>
-                            <!--<br>-->
-                            <!--<a class="btn btn-info-gradiant btn-rounded btn-md btn-arrow" id="lol{{forloop.index}}" data-animation="animated fadeInLeft" href="#{{item.link}}"> <span>Связаться с инженером <i class="ti-arrow-right"></i></span></a>-->
-                            <a class="btn btn-flat red-text p-1 my-1 mr-0 mml-1 collapsed" data-toggle="collapse" href="#collapseContent{{forloop.index}}" aria-expanded="false" aria-controls="collapseContent"></a>
-                            <!--<button type="button" class="btn btn-info-gradiant btn-rounded btn-md btn-arrow" id="{{forloop.index}} " data-toggle="modal" data-target="#{{item.link}}{{forloop.index}}">Связаться с инженером!</button>-->
-                            <!--<script src="{{site.baseurl}}/js/onclick.js"></script>-->
-                        </div>
+                        <br>
+                        <a class="btn btn-info-gradiant btn-rounded btn-md btn-arrow" id="lol{{forloop.index}}" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#{{item.link}}{{forloop.index}}" href="#{{item.link}}"> <span>Подробнее <i class="ti-arrow-right"></i></span></a>
+                        <a href="tel:{{item.phone}}" class="btn btn-md btn-danger btn-circle float-right"><i class="fa fa-2x fa-phone"></i></a>
                     </div>
                 </div>
             </div>
             <div class="modal fade ml-auto" id="{{item.link}}{{forloop.index}}" tabindex="-1" role="dialog" aria-labelledby="{{item.link}}{{forloop.index}}" aria-hidden="true">
                 <div class="modal-dialog" role="document">
-                    <div class="modal-content"><!-- <img src="{{site.baseurl}}/images/{{item.image}}" alt="{{item.details}}">-->
+                    <div class="modal-content">
                         <div class="modal-header">
+                            <a href="tel:{{item.phone}}" class="btn btn-primary btn-block"><i class="fa fa-phone"></i> Позвонить!</a>
                         </div>
                         <div class="owl-carousel owl-theme testi9">
                             {% for imgslide in item.img %}
@@ -51,12 +42,13 @@
                         <div class="modal-body">
                             <h5 align="justify">{{item.content}}</h5>
                             <form action="https://getsimpleform.com/messages?form_api_token=04e90985c056aca96d709f9d07633cdd" method="post">
+                                <input type="hidden" name="_subject" value="обращение из карточки продукта"/>
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
                                     <input type='tel' class="form-control" name='phone' placeholder="Ваш телефон для связи (дом/моб)"/>
                                 </div>
                                 <br />
-                                <textarea class="form-control textarea"  type='text' name='message' placeholder="Ваше предложение" rows="3"></textarea>
+                                <textarea class="form-control textarea" type='text' name='message' placeholder="Ваше сообщение, просьба перезвонить" rows="3"></textarea>
                                 <button type="submit" value="sub" name="sub" class="btn btn-primary"><i class="fa fa-share"></i> Отправить!</button>
                             </form>
                         </div>
@@ -64,26 +56,7 @@
                             <p align="right"><a title="Поделиться в facebook" href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}%23{{item.link}}" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x"></i></span></a> <a title="Поделиться по почте" href="mailto:&amp;subject={{item.title}}&amp;body=То что нужно {{site.url}}%23{{item.link}}%0A {{item.details_mailto}}"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x"></i></span></a> <a title="Запомнить ссылку в буфер" href="#" class="button2" data-copytarget="#windowurl{{forloop.index}}"><span class="fa-stack fa-lg" data-copytarget="#windowurl{{forloop.index}}"><i class="fa fa-square-o fa-stack-2x" data-copytarget="#windowurl{{forloop.index}}"></i><i class="fa fa-share-alt fa-stack-1x" data-copytarget="#windowurl{{forloop.index}}"></i></span></a><a title="Позвонить нам" href="tel:{{item.phone}}"><span class="fa-stack fa-lg"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-phone fa-stack-1x"></i></span></a>
                             </p>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <!--<a href="#" class="button1" data-copytarget="#windowurl{{forloop.index}}">
-                                <div class="container">
-                                    <span data-copytarget="#windowurl{{forloop.index}}" class="normal fa fa-square-o fa-stack fa-lg fa-clipboard"> ссылка</span>
-                                    <span data-copytarget="#windowurl{{forloop.index}}" class="hover fa fa-square-o fa-stack fa-lg fa-clipboard">    Жми</span>
-                                    <span data-copytarget="#windowurl{{forloop.index}}" class="copied fa fa-square-o fa-stack fa-lg fa-clipboard"> Готово!</span>
-                                </div>
-                            </a>
-                            <div id="share-bar{{forloop.index}}">
-                                 <div class="share-buttons">
-
-                                </div>
-                            </div>-->
-                            <!--<div class="container">
-                                <a href="https://www.facebook.com/sharer/sharer.php?u={{site.url}}%23{{item.link}}&title={{item.title}}" class="btn btn-social btn-facebook" onclick="window.open(this.href, 'pop-up', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;">
-                                    <span class="fa fa-facebook"></span>Facebook</a>
-                                <a href="mailto:?&subject=Blog%20Post:%20{{ page.title }}&body=Check%20out%20this%20amazing%20blog%20post!%20{{ site.url }}{{ page.url }}" class="btn btn-social btn-email">
-                                    <span class="fa fa-envelope"></span>Email</a>
-                            </div>-->
-                            <!--<button class="snipcart-add-item btn btn-sm btn-success float-right" data-item-id="6" data-item-name="Fruit Tea" data-item-price="4.59" data-item-weight="100" data-item-url="https://dragonfruit.jekyll-themes.com/products/" data-item-description="Lorem ipsum dolor sit amet, consectetur adipiscing elit." data-item-max-quantity="5">Add to cart </button>-->
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
                         </div>
                     </div>
                 </div>
