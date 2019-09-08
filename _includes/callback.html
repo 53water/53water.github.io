@@ -27,7 +27,7 @@
 				<form action="https://getsimpleform.com/messages?form_api_token=04e90985c056aca96d709f9d07633cdd" method="post">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                        <input type='tel' id="tel1" class="form-control" name='phone' placeholder="Ваш телефон для связи (дом/моб)"/>
+                        <input type='tel' id="tel1" class="form-control" name='phone' placeholder="Ваш телефон для связи (дом/моб)" required/>
                         <input type="hidden" name="_subject" value="Вас просили перезвонить по телефону"/>
                     </div>
                     <br/>
@@ -35,9 +35,9 @@
 			                <label class="control-label col-sm-6" for="registration-date"> Удобная дата и время:</label>
 			            	<div class="input-group registration-date-time">
 			            		<span class="input-group-addon" id="basic-addon1"><span class="fa fa-calendar" aria-hidden="true"></span></span>
-			            		<input class="form-control" name="registration_date" id="registration-date" type="date">
+			            		<input class="form-control" name="registration_date" id="registration-date" type="date" required>
 			            		<span class="input-group-addon" id="basic-addon1"><span class="fa fa-clock-o" aria-hidden="true"></span></span>
-			            		<select type="text" class="form-control" name="registration_hour" id="registration-hour">
+			            		<select type="text" class="form-control" name="registration_hour" id="registration-hour" required>
 								  	<option value="9">9 ч.</option>
 								  	<option value="10" selected >10 ч.</option>
 								  	<option value="11">11 ч.</option>
@@ -52,7 +52,7 @@
 								  	<option value="20">20 ч.</option>
 								  	<option value="21">21 ч.</option>
 							  </select>
-							  <select type="text" class="form-control" name="registration_minutes" id="registration-minutes">
+							  <select type="text" class="form-control" name="registration_minutes" id="registration-minutes" required>
 								  <option value="00">00 мин.</option>
 								  <option value="15">15 мин.</option>
 								  <option value="30">30 мин.</option>
@@ -83,10 +83,10 @@
 				<form action="https://getsimpleform.com/messages?form_api_token=04e90985c056aca96d709f9d07633cdd" method="post">
                     <input type="hidden" name="_subject" value="обращение с указанием email"/>
                     <div class="form-group">
-                    	<input id="email" class="form-control" type='email' name='email' placeholder="Ваш адрес email" />
+                    	<input id="email" class="form-control" type='email' name='email' placeholder="Ваш адрес email" required/>
                     </div>
                     <div class="form-group">
-                    	<textarea id="message1" class="form-control textarea" type='text' name='message' placeholder="Сообщение" rows="3"></textarea>
+                    	<textarea id="message1" class="form-control textarea" type='text' name='message' placeholder="Сообщение" rows="3" required></textarea>
                     </div>
                     <div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
