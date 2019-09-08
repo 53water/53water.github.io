@@ -11,7 +11,7 @@
                     <p class="m-t-30">{{item.details}}</p>
                 {% endfor %}
                 <script type="text/javascript">var submitted=false;</script>
-                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='{{site.baseurl}}/thank-you/';}"></iframe>
+                <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='{{site.url}}/thank-you/';}"></iframe>
                 <form class="contact-form rev" action="https://getsimpleform.com/messages?form_api_token=04e90985c056aca96d709f9d07633cdd" method="post" target="hidden_iframe" onsubmit="submitted=true;">
                 <input type="hidden" name="_subject" value="обращение из контактной формы с отзывом или вопросом"/>
                 <!-- <input type='hidden' name='redirect_to' value='{{site.url}}/thank-you/' /> 
