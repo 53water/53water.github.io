@@ -40,9 +40,9 @@ page-headers:
          details: 'Здесь жители и хозяйственники расскажут о своих проблемах, что думают об уже выполненных проектах. Каким подходом задача стала выполнимой. Что было и что в итоге получилось?'
           
     team:
-       - title: Our Dedicated Team
-         details: Express Coffee is very fortunate to have highly motivated and visionary founders establishing the brand of Express coffee. An uncompromising dedication and persistent hard work made it possible to realize their vision.
-
+       - title: Наша команда
+         details: 
+          
     partners:
        - title: В реализвованных проектах используется в основном продукция следующих торговых марок
          details: Подбор оборудования индивидуальный исходя из опыта. Приоритет - то, которое будет гарантированно работать долгое время.
