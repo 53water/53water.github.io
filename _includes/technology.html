@@ -19,7 +19,9 @@
                         <div class="icon-space"><i class="display-5 {{item.icon}}"></i></div>
                         <h5 class="font-medium">{{item.title}}</h5>
                         <p class="m-t-20">{{item.details}}</p>
-                        <a class="btn btn-primary" data-animation="animated fadeInLeft" href="tel:{{site.phone}}"> <span>{{item.call}} <i class="ti-arrow-right"></i></span> </a>
+                        {{item.button}}
+                        <!--<a class="btn btn-primary" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#CallBackModal"> <span>{{item.call}} <i class="ti-arrow-right"></i></span> </a>-->
+                        <!-- href="tel:{{site.phone}}"-->
                     </div>
                 </div>
             </div>

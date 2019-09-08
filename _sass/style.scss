@@ -1081,8 +1081,8 @@ Buttons
   .btn-themecolor.disabled:focus {
     background: #028ee1; }
 
-.btn-success,
-.btn-success.disabled {
+.btn-success1,
+.btn-success1.disabled {
   background: #1dc8cc;
   border: 1px solid #1dc8cc; }
   .btn-success:hover,
@@ -1521,12 +1521,13 @@ Buttons
 
 .c-button1{background:url(../images/buttons/bf625dd838084a9ea99ff80f7836b443.png) no-repeat 9px center #F44336;}
 .c-button2{background:url(../images/buttons/6ee4bf649e9946cfa5fc9c29ecefabb6.png) no-repeat 9px center #81C784;}
-.c-button3{background:url(../images/buttons/5b8fa2ee654843b89abb80105dcf093c.png) no-repeat 9px center #9575CD;}
+.c-button3{background:url(../images/buttons/bf625dd838084a9ea99ff80f7836b443.png) no-repeat 9px center #9575CD;}
 .c-button4{background:url(../images/buttons/15df379d1ac14effa117fe084ba9ebf5.png) no-repeat 12px 8px #B0BEC5;}
+.c-button5{background:url(../images/buttons/5b8fa2ee654843b89abb80105dcf093c.png) no-repeat 9px center #9575CD;}
 
-.c-button1.hover{ transform: translateY(0em) translateX(-7em);}
-.c-button2.hover{ transform: translateY(-3.8em) translateX(-6.5em);}
-.c-button3.hover{ transform: translateY(-6.5em) translateX(-3.8em);}
+.c-button2.hover{ transform: translateY(0em) translateX(-7em);}
+.c-button3.hover{ transform: translateY(-3.8em) translateX(-6.5em);}
+.c-button1.hover{ transform: translateY(-7.5em) translateX(-3.8em);}
 .c-button4.hover{ transform: translateY(-7em) translateX(0em);}
 
 

@@ -65,17 +65,17 @@ technology:
     - title: Удобно
       details: Предварительный расчёт по телефону. Бесплатный выезд инженера на участок (и в отдалённые населённые пункты!), бесплатная доставка оборудования, оплата по факту монтажа. 
       icon: icon-Handshake
-      call: Звонок инженеру
+      button: <a class="btn btn-primary" data-animation="animated fadeInLeft" href="tel:+7 921 6958007"> <span>Звонок инженеру <i class="ti-arrow-right"></i></span> </a>
       
     - title: Индивидуальный подход к клиенту
       details: Потому, что наш опыт работы на рынке услуг в Великом Новгороде более 10 лет. Гарантия на все виды работ.
       icon: icon-Idea-4
-      call: Заказать звонок
+      button: <a class="btn btn-primary" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#CallBackModal"> <span style="color:white">Заказать звонок <i class="ti-arrow-right"></i></span> </a>
 
     - title: Работа со специализированной техникой
       details: Дисциплинированная бригада, cпецинструмент, миниэкскаваторы, экскаваторы погрузчики, самосвалы, ассенизаторы.
       icon: icon-Gears
-      call: Обсудить ваш дом
+      button: <a class="btn btn-primary" data-animation="animated fadeInLeft" data-toggle="modal" data-target="#MessageModal"> <span style="color:white">Обсудить ваш дом <i class="ti-arrow-right"></i></span> </a>
 
 products:
 

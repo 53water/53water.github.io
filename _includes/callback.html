@@ -1,6 +1,9 @@
 <div class="buttons-holder">
   	<div class="callback-btn"></div>
-  	<div class="c-button1 c-button" data-toggle="modal" data-target="#CallBackModal"><span>Перезвоните мне</span></div>
+  	<a href="tel:{{site.phone}}">
+  		<div class="btn c-button1 c-button"><span>Позвонить </span></div>
+  	</a>
+  	<div class="c-button3 c-button" data-toggle="modal" data-target="#CallBackModal"><span>Перезвоните мне</span></div>
   	<div class="c-button2 c-button" data-toggle="modal" data-target="#MessageModal"><span>Написать сообщение</span></div>
 	<!--<div class="c-button3 c-button" data-toggle="modal" data-target="#DoctorModal"><span>Call a doctor</span></div>
 	<div class="c-button4 c-button" data-toggle="modal" data-target="#AppointmentModal"><span>Make an appointment</span></div>-->
@@ -8,7 +11,7 @@
 	
 <!-- Modal -->
 <div class="modal fade" id="CallBackModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
- 	<div class="modal-dialog" role="document">
+ 	<div class="modal-dialog modal" role="document">
 		<div class="modal-content">
 		  	<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -27,6 +30,36 @@
                         <input type='tel' id="tel1" class="form-control" name='phone' placeholder="Ваш телефон для связи (дом/моб)"/>
                         <input type="hidden" name="_subject" value="Вас просили перезвонить по телефону"/>
                     </div>
+                    <br/>
+			            <div class="form-group registration-date">
+			                <label class="control-label col-sm-6" for="registration-date"> Удобная дата и время:</label>
+			            	<div class="input-group registration-date-time">
+			            		<span class="input-group-addon" id="basic-addon1"><span class="fa fa-calendar" aria-hidden="true"></span></span>
+			            		<input class="form-control" name="registration_date" id="registration-date" type="date">
+			            		<span class="input-group-addon" id="basic-addon1"><span class="fa fa-clock-o" aria-hidden="true"></span></span>
+			            		<select type="text" class="form-control" name="registration_hour" id="registration-hour">
+								  	<option value="9">9 ч.</option>
+								  	<option value="10" selected >10 ч.</option>
+								  	<option value="11">11 ч.</option>
+								  	<option value="12">12 ч.</option>
+								  	<option value="13">13 ч.</option>
+								  	<option value="14">14 ч.</option>
+								  	<option value="15">15 ч.</option>
+								  	<option value="16">16 ч.</option>
+								  	<option value="17">17 ч.</option>
+								  	<option value="18">18 ч.</option>
+								  	<option value="19">19 ч.</option>
+								  	<option value="20">20 ч.</option>
+								  	<option value="21">21 ч.</option>
+							  </select>
+							  <select type="text" class="form-control" name="registration_minutes" id="registration-minutes">
+								  <option value="00">00 мин.</option>
+								  <option value="15">15 мин.</option>
+								  <option value="30">30 мин.</option>
+								  <option value="45">45 мин.</option>
+							  </select> 
+			            	</div>
+			            </div>
         			<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
 						<button type="submit" class="btn btn-primary">Отправить</button>
@@ -50,7 +83,7 @@
 				<form action="https://getsimpleform.com/messages?form_api_token=04e90985c056aca96d709f9d07633cdd" method="post">
                     <input type="hidden" name="_subject" value="обращение с указанием email"/>
                     <div class="form-group">
-                    	<input id="email" class="form-control" type='email' name='email' placeholder="удобный адрес email" />
+                    	<input id="email" class="form-control" type='email' name='email' placeholder="Ваш адрес email" />
                     </div>
                     <div class="form-group">
                     	<textarea id="message1" class="form-control textarea" type='text' name='message' placeholder="Сообщение" rows="3"></textarea>
