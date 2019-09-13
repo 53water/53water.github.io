@@ -6,7 +6,7 @@ details: Всё от поиска воды до её потребления по
 details_slider: Все работы от поиска воды до установки приборов потребления в вашем доме и на вашем участке под ключ!
 details_mailto: Все работы от поиска воды до установки приборов потребления в вашем доме и на вашем участке под ключ!
 phone: '+7 921 6958007'
-image_slider: 0111.png
+image_slider: vodosnabjenie.png
 link: 'Vodosnabjenie'
 image: razvodka.jpg
 icon: vodosnabjenie.svg
