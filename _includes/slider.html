@@ -7,7 +7,6 @@
     </ol>
     <!-- Wrapper For Slides -->
     <div class="carousel-inner" role="listbox">
-
     {% for item in site.posts %}
         <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
             <!-- Slide Background --><img src="{{site.baseurl}}/images/slider/{{item.image_slider}}" alt="{{site.title}}" class="slide-image" />
@@ -28,19 +27,19 @@
             </div>
         </div>
         <script type="text/javascript">
-        $(document).ready(function () {
-            if(window.location.href.indexOf('#{{item.link}}') != -1) {
-                $('#{{item.link}}{{forloop.index}}').modal('show');
-            }
-        });
-        $(document).ready(function () {
-            $("#{{forloop.index}}{{item.link}}").click(function () {
-                $('#{{item.link}}{{forloop.index}}').modal({
-                    backdrop: 'true',
-                    keyboard: true
-                })
-            }
-        )});
+            $(document).ready(function () {
+                if(window.location.href.indexOf('#{{item.link}}') != -1) {
+                    $('#{{item.link}}{{forloop.index}}').modal('show');
+                }
+            });
+            $(document).ready(function () {
+                $("#{{forloop.index}}{{item.link}}").click(function () {
+                    $('#{{item.link}}{{forloop.index}}').modal({
+                        backdrop: 'true',
+                        keyboard: true
+                    })
+                }
+            )});
         </script>
         {% endfor %}
             <!-- End of Slide -->
