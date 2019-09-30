@@ -1,5 +1,5 @@
 <section id="slider-sec" class="slider4">
-<div id="slider4" class="carousel bs-slider slide control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="2500">
+<div id="slider4" class="carousel bs-slider slide fade control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="1000" >
     <ol class="carousel-indicators">
         {% for item in site.posts %}
         <li data-target="#slider4" data-slide-to="{{forloop.index0}}" class="{% if forloop.index == 1 %}active{% endif %}"></li>
@@ -10,6 +10,7 @@
     {% for item in site.posts %}
         <div class="carousel-item {% if forloop.index == 1 %}active{% endif %}">
             <!-- Slide Background --><img src="{{site.baseurl}}/images/slider/{{item.image_slider}}" alt="{{site.title}}" class="slide-image" />
+            <div class="bs-slider-overlay"></div>
             <!-- Slide Text Layer -->
             <div class="slide-text slide_style_left">
                 <div class="container">
@@ -19,7 +20,6 @@
                             <p class="font-bold">{{item.details_slider}}</p>
                             <div>
                                 <a id="{{forloop.index}}{{item.link}}" class="btn btn-info-gradiant btn-rounded btn-md btn-arrow" data-animation="animated fadeInLeft" href="#{{item.link}}"> <span>Подробнее <i class="ti-arrow-right"></i></span> </a>
-                               <!--  <a class="btn btn-outline-inverse btn-rounded btn-md btn-arrow m-l-20" data-animation="animated fadeInLeft" data-toggle="collapse" href="#"> <span>CHECK FEATURES <i class="ti-arrow-right"></i></span> </a> -->
                             </div>
                         </div>
                     </div>

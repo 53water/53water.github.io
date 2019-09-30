@@ -25,7 +25,7 @@
             }
 
             //Variables on page load
-            var $firstAnimatingElems = carousel.find( '.carousel-item:first' ).find( "[data-animation ^= 'animated']" );
+            var $firstAnimatingElems = carousel.find( '.item:first' ).find( "[data-animation ^= 'animated']" );
             //Initialize carousel
             carousel.carousel( );
             //Animate captions in first slide on page load
@@ -35,7 +35,16 @@
                 var $animatingElems = $( e.relatedTarget ).find( "[data-animation ^= 'animated']" );
                 doAnimations( $animatingElems );
             } );
-           
+            //swipe initial 
+            $( ".carousel .carousel-inner" ).swipe( {
+                swipeLeft: function ( event, direction, distance, duration, fingerCount ) {
+                    this.parent( ).carousel( 'next' );
+                },
+                swipeRight: function ( ) {
+                    this.parent( ).carousel( 'prev' );
+                },
+                threshold: 0
+            } );
 
         } );
     };
